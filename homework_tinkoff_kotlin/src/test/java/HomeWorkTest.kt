@@ -64,6 +64,11 @@ class HomeWorkTest {
     }
 
     @Test
+    fun testResolveTaskTwoWithFourDigitNumber() {
+        assertEquals(myHomeWork.resolveTaskTwo("1234"), "Вы ввели не трехзначное число", "Crash test when number have 4 digit")
+    }
+
+    @Test
     fun testResolveTaskTwoWithOneHundred() {
         assertEquals(myHomeWork.resolveTaskTwo("100"), "001", "Crash test when number is 100")
     }
