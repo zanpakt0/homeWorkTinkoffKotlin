@@ -137,4 +137,37 @@ class HomeWorkTest {
     fun testResolveTaskFourWhenStringHaveOneDigit() {
         assertEquals(myHomeWork.resolveTaskFour("1"), "1", "Crash test when message have one digit")
     }
+
+    @Test
+    fun testResolveTaskFive1000() {
+        assertEquals(myHomeWork.resolveTaskFive("1000"), "Одна тысяча ", "Crash test when message is 1000")
+    }
+    @Test
+    fun testResolveTaskFive1() {
+        assertEquals(myHomeWork.resolveTaskFive("1"), "один ", "Crash test when message is 1")
+    }
+
+    @Test
+    fun testResolveTaskFive200() {
+        assertEquals(myHomeWork.resolveTaskFive("200"), "двести ", "Crash test when message is 200")
+    }
+    @Test
+    fun testResolveTaskFive30() {
+        assertEquals(myHomeWork.resolveTaskFive("30"), "тридцать ", "Crash test when message is 30")
+    }
+
+    @Test
+    fun testResolveTaskFive14() {
+        assertEquals(myHomeWork.resolveTaskFive("14"), "четырнадцать ", "Crash test when message is 14")
+    }
+
+    @Test
+    fun testResolveTaskFive567() {
+        assertEquals(myHomeWork.resolveTaskFive("567"), "пятьсот шестьдесят семь ", "Crash test when message is 567")
+    }
+
+    @Test
+    fun testResolveTaskFive819() {
+        assertEquals(myHomeWork.resolveTaskFive("819"), "восемьсот девятнадцать ", "Crash test when message is 819")
+    }
 }
